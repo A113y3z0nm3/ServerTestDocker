@@ -4,7 +4,7 @@ import (
 	"net/http"
 )
 
-func getCat(w http.ResponseWriter, r *http.Request) {
-	cat := random("./resources/pictures/cats/")
+func GetCat(w http.ResponseWriter, r *http.Request) {
+	cat := Random("./resources/pictures/cats/")
 	http.ServeFile(w, r, ("./resources/pictures/cats/" + cat))
 }
