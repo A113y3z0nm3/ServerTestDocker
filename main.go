@@ -15,5 +15,5 @@ func main() {
 	r.HandleFunc("/", rg.FirstPage).Methods("GET")
 	r.HandleFunc("/picture_cat", rg.GetCat).Methods("GET")
 	r.HandleFunc("/picture_dog", rg.GetDog).Methods("GET")
-	log.Fatal(http.ListenAndServe(":8000", r))
+	log.Fatal(http.ListenAndServe(":8080", r))
 }

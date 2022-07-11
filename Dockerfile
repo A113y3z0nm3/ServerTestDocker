@@ -7,10 +7,12 @@ COPY go.sum .
 
 
 RUN mkdir rest_go
-COPY ./rest_go/get_pic_cat.go /build/rest_go
-COPY ./rest_go/get_pic_dog.go /build/rest_go
-COPY ./rest_go/homepage.go /build/rest_go
-COPY ./rest_go/random.go /build/rest_go
+
+RUN mkdir rest_go/rego
+COPY ./rest_go/rego/get_pic_cat.go /build/rest_go/rego
+COPY ./rest_go/rego/get_pic_dog.go /build/rest_go/rego
+COPY ./rest_go/rego/homepage.go /build/rest_go/rego
+COPY ./rest_go/rego/random.go /build/rest_go/rego
 
 
 RUN mkdir /build/rest_go/resources
@@ -52,4 +54,4 @@ RUN go mod download
 RUN go mod tidy
 RUN GOOS=linux go build -pkgdir /build/rest_go ServerTestDocker
 EXPOSE 8000
-CMD [ "./server" ]
+CMD [ "./ServerTestDocker" ]

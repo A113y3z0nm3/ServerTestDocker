@@ -2,12 +2,11 @@ package rego
 
 import (
 	"math/rand"
-	"time"
 	"io/ioutil"
 )
 
-func Random(p string) string {
+func Random(p string, t int64) string {
 	files, _ := ioutil.ReadDir(p)
-	rand.Seed(time.Now().UTC().UnixNano())
+	rand.Seed(t)
 	return files[rand.Intn(len(files))].Name()
 }

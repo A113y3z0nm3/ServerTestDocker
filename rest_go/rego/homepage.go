@@ -5,5 +5,5 @@ import (
 )
 
 func FirstPage(w http.ResponseWriter, r *http.Request) {
-	http.ServeFile(w, r, "./resources/html/client.html")
+	http.ServeFile(w, r, "/home/user/GoProjects/ServerTestDocker/rest_go/resources/html/client.html")
 }
