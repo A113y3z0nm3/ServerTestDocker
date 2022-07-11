@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	rg "ServerTestDocker/rest_go/rego"
+	rg "github.com/A113y3z0nm3/ServerTestDocker/rest_go/rego"
 
 	"github.com/gorilla/mux"
 )
