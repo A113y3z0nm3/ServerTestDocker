@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Начальная страница</title>
+    <style>
+        .cat_button {
+            background: -moz-linear-gradient(#ff0000, #EBFFFF);
+            background: -webkit-gradient(linear, 0 0, 0 100%, from(#ff0000), to(#EBFFFF));
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            border: 0.5px solid rgb(0, 0, 0);
+            width: 200px;
+            height: 90px;
+        }
+        .dog_button {
+            background: -moz-linear-gradient(#0400ff, #EBFFFF);
+            background: -webkit-gradient(linear, 0 0, 0 100%, from(#0400ff), to(#EBFFFF));
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            border: 0.5px solid rgb(0, 0, 0);
+            width: 200px;
+            height: 90px;
+        }
+        </style>
+</head>
+<body style="background-color: #b1ebbf;">
+
+    <div id="formBody" style="display: flex;justify-content: center;align-items: center;height: 90vh;">
+
+    <form action="/picture_cat">
+        <button class="cat_button">Кошка</button>
+    </form>
+
+    <form action="/picture_dog">
+        <button class="dog_button">Собака</button>
+    </form>
+
+</body>
+</html>
