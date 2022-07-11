@@ -4,10 +4,13 @@ import (
 	"log"
 	"net/http"
 
-	rg "ServerTestDocker/rest_go/rego"
+	rg "ServerTestDocker/rego"
 
 	"github.com/gorilla/mux"
 )
+
+
+
 func main() {
 	log.Printf("Server started")
 	r := mux.NewRouter()

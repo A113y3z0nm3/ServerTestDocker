@@ -1,0 +1,90 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "version": "1.0.0",
+    "title": "Test Server",
+    "description": "### This is a simple server layout for learning docker and swagger. \nFunctionally, this site has 3 endpoints:\n* The first: is a client that can send 2 GET requests.\n* The second: gives a random photo of a cat on a GET request\n* The third: gives a random photo of a dog on a GET request\n",
+    "contact": {
+      "email": "kiselev.ib@rnd-mgn.ru"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080"
+    }
+  ],
+  "tags": [
+    {
+      "name": "picture_cat",
+      "description": "Photos of cats."
+    },
+    {
+      "name": "picture_dog",
+      "description": "Photos of dogs."
+    },
+    {
+      "name": "home",
+      "description": "Home page."
+    }
+  ],
+  "paths": {
+    "/picture_cat": {
+      "get": {
+        "tags": [
+          "picture_cat"
+        ],
+        "summary": "Gives away one of ten photos of cats randomly.",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "File path not found."
+          },
+          "500": {
+            "description": "Server error."
+          }
+        }
+      }
+    },
+    "/picture_dog": {
+      "get": {
+        "tags": [
+          "picture_dog"
+        ],
+        "summary": "Gives away one of ten photos of dogs randomly.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "File path not found."
+          },
+          "500": {
+            "description": "Server error."
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "tags": [
+          "home"
+        ],
+        "summary": "Represents a client with two GET request buttons.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "File path not found."
+          },
+          "500": {
+            "description": "Server error."
+          }
+        }
+      }
+    }
+  }
+}
