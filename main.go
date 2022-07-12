@@ -9,8 +9,6 @@ import (
 	"github.com/gorilla/mux"
 )
 
-
-
 func main() {
 	log.Printf("Server started")
 	r := mux.NewRouter()
